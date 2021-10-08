@@ -1,38 +1,148 @@
+.testOutput {
+  color:white;
+}
+
+.notification {
+  position: fixed;
+  bottom : 0;
+  left : 0;
+  right : 0;
+  height: 30px;
+  background-color: blue;
+  color:white;
+  text-align: center;
+  transition: transform 0.5s ease-in;
+}
+.notification.success {
+  background-color: green;
+}
+.notification.error {
+  background-color : red;
+}
+
+.notification.hide {
+  transform: translateY(30px);
+}
+.notification-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.content-wrapper {
+  background: white;
+  width: 960px;
+  padding : 40px;
+  color : black;
+}
+
+.header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  right : 0;
+  height : 80px;
+  background-color : purple;
+}
+.nav-wrapper {
+  display : flex;
+  justify-content: right;
+  align-items: center;
+  height:100%;
+}
+.nav-wrapper a {
+  width: 80px;
+  padding : 10px;
+  background-color: purple;
+  color: white;
+  margin-right:20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.loading-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 100;
+}
+
+.select-wrapper {
+  display : flex;
+  justify-content: space-around;
+}
+
+.modal-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggleButton {
+  margin-top : 10px;
+  background: none;
+  border : none;
+  color : purple;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  text-decoration: underline;
+}
+
 .App {
+  min-height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+
+.Card {
+  width: 300px;
+  background-color: white;
+  padding:20px;
+  border-radius: 20px;
+  color: black;
+  margin-top:3%;
+}
+
+input[type = "text"],input[type = "password"],input[type = "number"] {
+  width:70%;
+  border : 3px solid black;
+  margin-top:15px;
+  height: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type = "submit"] {
+  width:100px;
+  border: 0;
+  background-color: purple;
+  color:white;
+  text-align: center;
+  padding:10px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.form-control {
+  text-align: center;
+}
+.form-control label {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::placeholder {
+  text-transform: uppercase;
+  font-weight: bold;
 }
