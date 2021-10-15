@@ -8,6 +8,7 @@ import AuthForm from './Components/Auth/AuthForm';
 import Header from './Components/Header/Header';
 import Notification from './Components/Notification/Notificication';
 import MultiInput from './Pages/MultiInput/MultiInput';
+import General from './Components/General/General';
 
 
 import Profile from './Pages/Profile';
@@ -28,6 +29,9 @@ function App() {
         <Switch>
         <Route path = "/" exact>
           <Redirect to = "/login"/>
+        </Route>
+        <Route path = "/click" >
+          <General/>
         </Route>
         <Route path = "/input">
           <MultiInput/>
